@@ -3,10 +3,10 @@ import logoWhite from '../assets/logo_white.png'
 
 function Header({ activePage = 'Gaceta' }) {
   const navItems = [
-    { name: 'Gaceta', path: '/gaceta' },
-    { name: 'Artículos', path: '/articulos' },
-    { name: 'Categorías', path: '/categorias' },
-    { name: 'Imágenes', path: '/imagenes' }
+		{ name: 'Gaceta', path: '/gaceta' },
+		{ name: 'Artículos', path: '/articulos' },
+		{ name: 'Categorías', path: '/categorias' },
+		{ name: 'Imágenes', path: '/imagenes' }
   ]
 
   return (

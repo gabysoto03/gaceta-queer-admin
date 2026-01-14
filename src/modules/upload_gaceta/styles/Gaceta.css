@@ -1,0 +1,331 @@
+.gaceta-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.gaceta-container {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.gaceta-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+/* Sección izquierda - Subir PDF */
+.gaceta-upload-section {
+  grid-column: 1;
+}
+
+.pdf-upload-area {
+  border: 2px solid #e91e63;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pdf-upload-area:hover {
+  background-color: #fafafa;
+}
+
+.pdf-upload-input {
+  display: none;
+}
+
+.pdf-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.pdf-icon {
+  margin-bottom: 1.5rem;
+}
+
+.pdf-upload-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #424242;
+  margin: 0 0 0.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pdf-upload-subtitle {
+  font-size: 0.9rem;
+  color: #9e9e9e;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pdf-file-name {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #424242;
+  font-weight: 500;
+}
+
+/* Sección media - Créditos */
+.gaceta-creditos-section {
+  grid-column: 2;
+  border-right: 1px solid #e91e63;
+  padding-right: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e91e63;
+  margin: 0 0 1.5rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.creditos-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.credito-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.credito-field label {
+  font-size: 0.9rem;
+  color: #424242;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.credito-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.credito-input:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+/* Sección derecha - Equipo de la edición */
+.gaceta-equipo-section {
+  grid-column: 3;
+  padding-left: 2rem;
+}
+
+.equipo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.equipo-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.equipo-rol-label {
+  font-size: 0.9rem;
+  color: #424242;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  white-space: nowrap;
+}
+
+.equipo-add-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: background-color 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.equipo-add-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.equipo-add-button:active {
+  transform: scale(0.95);
+}
+
+.equipo-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #333;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
+
+.equipo-input:focus {
+  outline: none;
+  border-color: #e91e63;
+}
+
+.equipo-coord-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #424242;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.equipo-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #e91e63;
+}
+
+/* Botón Guardar gaceta */
+.gaceta-save-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.gaceta-save-button {
+  padding: 0.875rem 2.5rem;
+  background: linear-gradient(90deg, #e91e63 0%, #9c27b0 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  letter-spacing: 0.5px;
+}
+
+.gaceta-save-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.gaceta-save-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .gaceta-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .gaceta-upload-section {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .gaceta-creditos-section {
+    grid-column: 1;
+    grid-row: 2;
+    border-right: 1px solid #e91e63;
+    border-bottom: none;
+    padding-right: 2rem;
+    padding-bottom: 0;
+  }
+
+  .gaceta-equipo-section {
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gaceta-container {
+    padding: 1.5rem;
+  }
+
+  .gaceta-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .gaceta-upload-section,
+  .gaceta-creditos-section,
+  .gaceta-equipo-section {
+    grid-column: 1;
+  }
+
+  .gaceta-creditos-section {
+    border-right: none;
+    border-bottom: 1px solid #e91e63;
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .gaceta-equipo-section {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .equipo-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .equipo-rol-label {
+    margin-bottom: 0.25rem;
+  }
+
+  .gaceta-save-container {
+    justify-content: center;
+  }
+
+  .gaceta-save-button {
+    width: 100%;
+  }
+}
